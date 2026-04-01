@@ -195,9 +195,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Fi8-GU-Tzc" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" constant="8" id="AS0-mD-4lP"/>
-                                    <constraint firstAttribute="trailing" secondItem="6YZ-wv-jeH" secondAttribute="trailing" constant="16" id="JK5-QB-NVy"/>
                                     <constraint firstAttribute="trailing" secondItem="Fi8-GU-Tzc" secondAttribute="trailing" constant="8" id="PHy-r4-24i"/>
-                                    <constraint firstItem="6YZ-wv-jeH" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" constant="20" id="PZV-If-1Yq"/>
                                     <constraint firstItem="6YZ-wv-jeH" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" id="Qj4-fQ-pr7"/>
                                     <constraint firstItem="sRM-fQ-OSa" firstAttribute="centerX" secondItem="Teb-BL-ytX" secondAttribute="centerX" id="WO2-ZL-yB8"/>
                                     <constraint firstAttribute="trailing" secondItem="6YZ-wv-jeH" secondAttribute="trailing" id="Wym-NG-krf"/>

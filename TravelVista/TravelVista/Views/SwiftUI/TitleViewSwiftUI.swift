@@ -1,5 +1,5 @@
 //
-//  TitleViewSwiftUI.swift
+//  TitleView.swift
 //  TravelVista
 //
 //  Created by Mathieu ARRIO on 26/03/2026.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TitleViewSwiftUI: View {
+struct TitleView: View {
     let name: String
     let capital: String
     let rate: Int
@@ -47,5 +47,5 @@ struct TitleViewSwiftUI: View {
 }
 
 #Preview {
-    TitleViewSwiftUI(name: "France", capital: "Paris", rate: 5)
+    TitleView(name: "France", capital: "Paris", rate: 5)
 }

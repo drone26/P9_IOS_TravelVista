@@ -3,13 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		390750792F7D2134001C8808 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390750782F7D2134001C8808 /* ListView.swift */; };
-		3907507B2F7D230E001C8808 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3907507A2F7D230E001C8808 /* DetailView.swift */; };
-		3948ED3F2F7584840092982E /* TitleViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3948ED3E2F7584840092982E /* TitleViewSwiftUI.swift */; };
 		424C31BB2B30919400279238 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424C31BA2B30919400279238 /* CustomCell.swift */; };
 		424C31BD2B30955E00279238 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424C31BC2B30955E00279238 /* DetailViewController.swift */; };
 		424C31C02B30A39B00279238 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424C31BF2B30A39B00279238 /* MapViewController.swift */; };
@@ -24,9 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		390750782F7D2134001C8808 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		3907507A2F7D230E001C8808 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		3948ED3E2F7584840092982E /* TitleViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewSwiftUI.swift; sourceTree = "<group>"; };
 		424C31BA2B30919400279238 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		424C31BC2B30955E00279238 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		424C31BF2B30A39B00279238 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +35,10 @@
 		42B90C1E2B2A056000779364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42B90C202B2A056000779364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3907507C2F7D65D1001C8808 /* SwiftUI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SwiftUI; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		42B90C0C2B2A055B00779364 /* Frameworks */ = {
@@ -60,9 +58,7 @@
 				42B90C162B2A055B00779364 /* ListViewController.swift */,
 				424C31BA2B30919400279238 /* CustomCell.swift */,
 				424C31BF2B30A39B00279238 /* MapViewController.swift */,
-				3948ED3E2F7584840092982E /* TitleViewSwiftUI.swift */,
-				390750782F7D2134001C8808 /* ListView.swift */,
-				3907507A2F7D230E001C8808 /* DetailView.swift */,
+				3907507C2F7D65D1001C8808 /* SwiftUI */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +118,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				3907507C2F7D65D1001C8808 /* SwiftUI */,
+			);
 			name = TravelVista;
 			productName = TravelVista;
 			productReference = 42B90C0F2B2A055B00779364 /* TravelVista.app */;
@@ -180,15 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				424C31C42B30A72300279238 /* Model.swift in Sources */,
-				3948ED3F2F7584840092982E /* TitleViewSwiftUI.swift in Sources */,
 				424C31C82B30A78B00279238 /* Service.swift in Sources */,
-				3907507B2F7D230E001C8808 /* DetailView.swift in Sources */,
 				42B90C172B2A055B00779364 /* ListViewController.swift in Sources */,
 				424C31C02B30A39B00279238 /* MapViewController.swift in Sources */,
 				42B90C132B2A055B00779364 /* AppDelegate.swift in Sources */,
 				424C31BD2B30955E00279238 /* DetailViewController.swift in Sources */,
 				424C31BB2B30919400279238 /* CustomCell.swift in Sources */,
-				390750792F7D2134001C8808 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

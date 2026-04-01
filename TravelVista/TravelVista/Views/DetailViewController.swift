@@ -7,17 +7,18 @@
 
 import UIKit
 import MapKit
+import SwiftUI
 
 class DetailViewController: UIViewController, MKMapViewDelegate {
-    @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var capitalNameLabel: UILabel!
+//    @IBOutlet weak var countryNameLabel: UILabel!
+//    @IBOutlet weak var capitalNameLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var embedMapView: UIView!
     @IBOutlet weak var titleView: UIView!
-    @IBOutlet weak var rateView: UIView!
+//    @IBOutlet weak var rateView: UIView!
     
     var country: Country?
     
@@ -28,18 +29,43 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
 
         if let country = self.country {
             self.setUpData(country: country)
+            self.setupSwiftUITitleView(for: country)
         }
     }
+    
+    private func setupSwiftUITitleView(for country: Country) {
+            // Initialize the SwiftUI View
+            let swiftUIView = TitleViewSwiftUI(
+                name: country.name,
+                capital: country.capital,
+                rate: country.rate
+            )
+
+            // Wrap it in a UIHostingController
+            let hostingController = UIHostingController(rootView: swiftUIView)
+
+            // Add the hosting controller as a child view controller
+            addChild(hostingController)
+            hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+            titleView.addSubview(hostingController.view)
+
+            // Set constraints to make the SwiftUI view fill the titleView container
+            NSLayoutConstraint.activate([
+                hostingController.view.topAnchor.constraint(equalTo: titleView.topAnchor),
+                hostingController.view.bottomAnchor.constraint(equalTo: titleView.bottomAnchor),
+                hostingController.view.leftAnchor.constraint(equalTo: titleView.leftAnchor),
+                hostingController.view.rightAnchor.constraint(equalTo: titleView.rightAnchor)
+            ])
+
+            hostingController.didMove(toParent: self)
+        }
     
     private func setUpData(country: Country) {
         self.title = country.name
         
-        self.countryNameLabel.text = country.name
-        self.capitalNameLabel.text = country.capital
         self.imageView.image = UIImage(named: country.pictureName )
         self.descriptionTextView.text = country.description
         
-        self.setRateStars(rate: country.rate)
         self.setMapLocation(lat: self.country?.coordinates.latitude ?? 28.394857,
                             long: self.country?.coordinates.longitude ?? 84.124008)
     }
@@ -59,21 +85,6 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         let region = MKCoordinateRegion(center: initialLocation, span: span)
         self.mapView.setRegion(region, animated: true)
         self.mapView.delegate = self
-    }
-    
-    private func setRateStars(rate: Int) {
-        var lastRightAnchor = self.rateView.rightAnchor
-        for _ in 0..<rate {
-            let starView = UIImageView(image: UIImage(systemName: "star.fill"))
-            self.rateView.addSubview(starView)
-            
-            starView.translatesAutoresizingMaskIntoConstraints = false
-            starView.widthAnchor.constraint(equalToConstant: 19).isActive = true
-            starView.heightAnchor.constraint(equalToConstant: 19).isActive = true
-            starView.centerYAnchor.constraint(equalTo: self.rateView.centerYAnchor).isActive = true
-            starView.rightAnchor.constraint(equalTo: lastRightAnchor).isActive = true
-            lastRightAnchor = starView.leftAnchor
-        }
     }
     
     // Cette fonction est appelée lorsque la carte est cliquée

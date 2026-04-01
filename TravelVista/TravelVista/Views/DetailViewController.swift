@@ -96,3 +96,4 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
+

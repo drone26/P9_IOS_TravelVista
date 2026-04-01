@@ -131,7 +131,7 @@
         <!--Detail View Controller-->
         <scene sceneID="HZV-6C-8oR">
             <objects>
-                <viewController id="0Db-d4-uNW" customClass="DetailViewController" customModule="TravelVista" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Db-d4-uNW" customClass="DetailViewController" customModule="TravelVista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P5q-il-YDl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fi8-GU-Tzc">
-                                        <rect key="frame" x="8" y="65" width="377" height="146"/>
+                                        <rect key="frame" x="8" y="65" width="377" height="178"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="215" id="NCg-uX-jM5"/>
@@ -163,7 +163,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRM-fQ-OSa">
-                                        <rect key="frame" x="85.666666666666686" y="246" width="222" height="222"/>
+                                        <rect key="frame" x="85.666666666666686" y="278" width="222" height="222"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TR-oZ-w9T">
                                                 <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
@@ -195,14 +195,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Fi8-GU-Tzc" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" constant="8" id="AS0-mD-4lP"/>
-                                    <constraint firstAttribute="trailing" secondItem="6YZ-wv-jeH" secondAttribute="trailing" constant="16" id="JK5-QB-NVy"/>
                                     <constraint firstAttribute="trailing" secondItem="Fi8-GU-Tzc" secondAttribute="trailing" constant="8" id="PHy-r4-24i"/>
-                                    <constraint firstItem="6YZ-wv-jeH" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" constant="20" id="PZV-If-1Yq"/>
                                     <constraint firstItem="6YZ-wv-jeH" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" id="Qj4-fQ-pr7"/>
                                     <constraint firstItem="sRM-fQ-OSa" firstAttribute="centerX" secondItem="Teb-BL-ytX" secondAttribute="centerX" id="WO2-ZL-yB8"/>
                                     <constraint firstAttribute="trailing" secondItem="6YZ-wv-jeH" secondAttribute="trailing" id="Wym-NG-krf"/>
                                     <constraint firstItem="sRM-fQ-OSa" firstAttribute="top" secondItem="Fi8-GU-Tzc" secondAttribute="bottom" constant="35" id="dlv-P4-ERe"/>
-                                    <constraint firstAttribute="bottom" secondItem="sRM-fQ-OSa" secondAttribute="bottom" constant="32" id="hfw-fg-MSI"/>
+                                    <constraint firstAttribute="bottom" secondItem="sRM-fQ-OSa" secondAttribute="bottom" id="hfw-fg-MSI"/>
                                     <constraint firstItem="6YZ-wv-jeH" firstAttribute="top" secondItem="Teb-BL-ytX" secondAttribute="top" id="k64-LA-DYe"/>
                                     <constraint firstItem="Fi8-GU-Tzc" firstAttribute="top" secondItem="6YZ-wv-jeH" secondAttribute="bottom" id="qoa-vG-UTy"/>
                                 </constraints>

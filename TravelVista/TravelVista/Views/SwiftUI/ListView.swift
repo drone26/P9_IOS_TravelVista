@@ -43,7 +43,7 @@ struct CountryRow: View {
 
 struct ListView: View {
     // Chargement des données réelles depuis Source.json
-    let regions: [Region] = Service().load("Source.json")
+    let regions: [Region] = (try? Service().load("Source.json")) ?? []
 
     var body: some View {
         NavigationView {

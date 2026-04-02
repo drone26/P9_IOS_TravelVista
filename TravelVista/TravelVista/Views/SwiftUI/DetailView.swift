@@ -17,9 +17,7 @@ struct DetailView: UIViewControllerRepresentable {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         // Instanciation sécurisée avec guard et as?
-        guard let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
-            fatalError("Impossible de charger le DetailViewController. Vérifiez le Storyboard ID.")
-        }
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
         // Transmission de la donnée
         detailVC.country = self.country

@@ -10,15 +10,12 @@ import MapKit
 import SwiftUI
 
 class DetailViewController: UIViewController, MKMapViewDelegate {
-//    @IBOutlet weak var countryNameLabel: UILabel!
-//    @IBOutlet weak var capitalNameLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var embedMapView: UIView!
     @IBOutlet weak var titleView: UIView!
-//    @IBOutlet weak var rateView: UIView!
     
     var country: Country?
     
@@ -75,6 +72,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         self.embedMapView.layer.cornerRadius = self.embedMapView.frame.size.width / 2
         self.mapButton.layer.cornerRadius = self.mapButton.frame.size.width / 2
         
+        self.mapButton.accessibilityIdentifier = "openMapButton"
         self.mapView.layer.borderColor = UIColor(named: "CustomSand")?.cgColor
         self.mapView.layer.borderWidth = 2
     }

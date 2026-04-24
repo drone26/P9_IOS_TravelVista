@@ -35,7 +35,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     
     private func setupSwiftUITitleView(for country: Country) {
             // Initialize the SwiftUI View
-            let swiftUIView = TitleViewSwiftUI(
+            let swiftUIView = TitleView(
                 name: country.name,
                 capital: country.capital,
                 rate: country.rate
@@ -96,3 +96,4 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
+

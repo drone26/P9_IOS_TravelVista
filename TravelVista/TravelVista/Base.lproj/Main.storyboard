@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="TravelVista" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,21 +23,21 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" id="x0N-R8-V1l" customClass="CustomCell" customModule="TravelVista" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="67.333335876464844"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="68.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x0N-R8-V1l" id="bHS-0D-i27">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="67.333335876464844"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="68.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vietnam" translatesAutoresizingMaskIntoConstraints="NO" id="iHs-6J-9UW">
-                                                    <rect key="frame" x="20" y="7.6666666666666643" width="52" height="52"/>
+                                                    <rect key="frame" x="20" y="8.3333333333333357" width="52" height="52"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="52" id="VfZ-5T-Gig"/>
                                                         <constraint firstAttribute="width" constant="52" id="ice-Yu-OOT"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-iX-573">
-                                                    <rect key="frame" x="80" y="8.6666666666666643" width="223" height="50"/>
+                                                    <rect key="frame" x="80" y="9.3333333333333357" width="223" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vietnam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-lV-PNW">
                                                             <rect key="frame" x="0.0" y="0.0" width="223" height="24"/>
@@ -69,7 +69,7 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xpm-jR-181">
-                                                    <rect key="frame" x="341" y="17.333333333333339" width="32" height="31.666666666666661"/>
+                                                    <rect key="frame" x="341" y="17.999999999999996" width="32" height="31.666666666666661"/>
                                                     <color key="tintColor" name="CustomSand"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="EKj-Q0-VQE"/>
@@ -77,7 +77,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrV-st-wKH">
-                                                    <rect key="frame" x="311" y="23" width="22" height="21.333333333333329"/>
+                                                    <rect key="frame" x="311" y="23" width="22" height="22.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="ySF-Et-bY7"/>
                                                     </constraints>
@@ -131,7 +131,7 @@
         <!--Detail View Controller-->
         <scene sceneID="HZV-6C-8oR">
             <objects>
-                <viewController id="0Db-d4-uNW" customClass="DetailViewController" customModule="TravelVista" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Db-d4-uNW" customClass="DetailViewController" customModule="TravelVista" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P5q-il-YDl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,18 +152,15 @@
                                         </constraints>
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fi8-GU-Tzc">
-                                        <rect key="frame" x="8" y="65" width="377" height="146"/>
+                                        <rect key="frame" x="8" y="65" width="377" height="178"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="215" id="NCg-uX-jM5"/>
-                                        </constraints>
                                         <string key="text">Officially the Socialist Republic of Vietnam (Vietnamese: Cộng hòa Xã hội chủ nghĩa Việt Nam), is a country in Southeast Asia and the easternmost country on the Indochinese Peninsula. With an estimated 97.8 million inhabitants as of 2020, it is the 16th most populous country in the world. Vietnam shares its land borders with China to the north, and Laos and Cambodia to the west. It shares its maritime borders with Thailand through the Gulf of Thailand, and the Philippines, Indonesia and Malaysia through the South China Sea. Its capital city is Hanoi, and its most populous city is Ho Chi Minh City.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRM-fQ-OSa">
-                                        <rect key="frame" x="85.666666666666686" y="246" width="222" height="222"/>
+                                        <rect key="frame" x="85.666666666666686" y="278" width="222" height="222"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TR-oZ-w9T">
                                                 <rect key="frame" x="0.0" y="0.0" width="222" height="222"/>
@@ -194,13 +191,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="sRM-fQ-OSa" firstAttribute="top" secondItem="Fi8-GU-Tzc" secondAttribute="bottom" constant="35" id="8HO-t6-mBT"/>
                                     <constraint firstItem="Fi8-GU-Tzc" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" constant="8" id="AS0-mD-4lP"/>
                                     <constraint firstAttribute="trailing" secondItem="Fi8-GU-Tzc" secondAttribute="trailing" constant="8" id="PHy-r4-24i"/>
                                     <constraint firstItem="6YZ-wv-jeH" firstAttribute="leading" secondItem="Teb-BL-ytX" secondAttribute="leading" id="Qj4-fQ-pr7"/>
                                     <constraint firstItem="sRM-fQ-OSa" firstAttribute="centerX" secondItem="Teb-BL-ytX" secondAttribute="centerX" id="WO2-ZL-yB8"/>
                                     <constraint firstAttribute="trailing" secondItem="6YZ-wv-jeH" secondAttribute="trailing" id="Wym-NG-krf"/>
-                                    <constraint firstItem="sRM-fQ-OSa" firstAttribute="top" secondItem="Fi8-GU-Tzc" secondAttribute="bottom" constant="35" id="dlv-P4-ERe"/>
-                                    <constraint firstAttribute="bottom" secondItem="sRM-fQ-OSa" secondAttribute="bottom" constant="32" id="hfw-fg-MSI"/>
+                                    <constraint firstItem="sRM-fQ-OSa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fi8-GU-Tzc" secondAttribute="bottom" constant="35" id="dlv-P4-ERe"/>
+                                    <constraint firstAttribute="bottom" secondItem="sRM-fQ-OSa" secondAttribute="bottom" id="hfw-fg-MSI"/>
                                     <constraint firstItem="6YZ-wv-jeH" firstAttribute="top" secondItem="Teb-BL-ytX" secondAttribute="top" id="k64-LA-DYe"/>
                                     <constraint firstItem="Fi8-GU-Tzc" firstAttribute="top" secondItem="6YZ-wv-jeH" secondAttribute="bottom" id="qoa-vG-UTy"/>
                                 </constraints>
